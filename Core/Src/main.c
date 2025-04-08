@@ -184,7 +184,7 @@ int main(void)
     for (int i=0; i<1000; i++) {
       SEGGER_RTT_printf(0, "i = 0x%x\n", i);
       lcd_display_number(i);
-      HAL_Delay(50);
+      HAL_Delay(100);
     }
   }
   /* USER CODE END 3 */
@@ -256,13 +256,13 @@ static void MX_LCD_Init(void)
   /* USER CODE END LCD_Init 1 */
   hlcd.Instance = LCD;
   hlcd.Init.Prescaler = LCD_PRESCALER_1;
-  hlcd.Init.Divider = LCD_DIVIDER_24;
+  hlcd.Init.Divider = LCD_DIVIDER_16;
   hlcd.Init.Duty = LCD_DUTY_1_4;
-  hlcd.Init.Bias = LCD_BIAS_1_3;
+  hlcd.Init.Bias = LCD_BIAS_1_2;
   hlcd.Init.VoltageSource = LCD_VOLTAGESOURCE_INTERNAL;
-  hlcd.Init.Contrast = LCD_CONTRASTLEVEL_0;
+  hlcd.Init.Contrast = LCD_CONTRASTLEVEL_3;
   hlcd.Init.DeadTime = LCD_DEADTIME_0;
-  hlcd.Init.PulseOnDuration = LCD_PULSEONDURATION_4;
+  hlcd.Init.PulseOnDuration = LCD_PULSEONDURATION_7;
   hlcd.Init.HighDrive = LCD_HIGHDRIVE_0;
   hlcd.Init.BlinkMode = LCD_BLINKMODE_OFF;
   hlcd.Init.BlinkFrequency = LCD_BLINKFREQUENCY_DIV8;
