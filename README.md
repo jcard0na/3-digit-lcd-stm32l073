@@ -22,3 +22,7 @@
 
 Open (i.e. remove resistors) from SB45 and SB14
 Close (i.e. short pads) from SB62 and SB63
+
+## Expected Output 
+
+![](counting.gif)
